@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn-group-lg>.btn, .btn-lg{
+  line-height: 0.5;
+}
+
+.spinner{
+  position: relative;
+  margin:10px 40%;
+}
+
+@media screen and (max-width: 577px){
+  .btn_align{
+    margin:10px 35%;
+  }
+}
