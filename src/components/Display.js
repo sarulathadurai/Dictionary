@@ -6,10 +6,9 @@ import Definition from './Definition';
 class Display extends Component {
     
     state = {
-        phonetic:[],
+       
         meaning:[],
         isLoading:true,
-        origin:"",
         error:false
     }
     
@@ -22,9 +21,7 @@ class Display extends Component {
             resp.map(data =>{
                return this.setState({
 
-                    phonetic:this.state.phonetic.concat(data.phonetic),
                     meaning:this.state.meaning.concat(data.meanings),
-                    origin:data.origin,
                     isLoading:false
                 })     
             })       
@@ -62,19 +59,6 @@ class Display extends Component {
             return ( 
                 <React.Fragment>
                 <div className="container">
-                    <ul className="list-group"><h5 className="text-info"><strong>Pronunciation</strong></h5>
-                  {
-                    this.state.phonetic.map(item => 
-                      <div key = {item.index}>         
-                         <li className="list-group-item">{item}</li>
-                      </div>)
-                  }
-                  </ul>
-                  <ul className="list-group">
-                  <h5 className="text-info"><strong>Origin</strong></h5>
-                  <li className="list-group-item">{this.state.origin}</li>
-                  </ul>
-           
                   <Definition meaning={this.state.meaning}/>
                 </div>
                 </React.Fragment>
